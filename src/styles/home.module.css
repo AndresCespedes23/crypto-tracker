@@ -1,0 +1,24 @@
+.title {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cryptoCard {
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    border-radius: 9999px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.158);
+}
+.cryptoImage {
+    padding-right: 2vw;
+    height: 3rem;
+    width: 3rem;
+}
+.cardContent {
+    display: flex;
+    flex-direction: column;
+}
