@@ -14,7 +14,6 @@ export default function Home() {
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&locale=ar"
         )
           .then((response) => response.json())
-
           .then(setCoinData)
           .catch((error) => console.log(error));
 
@@ -39,26 +38,26 @@ export default function Home() {
         <header className={styles.header}>
           <h1 className={styles.title}>🌐 Crypto AD 🌐</h1>
         </header>
-        {loading ? (
-          <Spinner />
-        ) : (
-          coinData?.map((coin) => {
-            return (
-              <div key={coin.id} className={styles.cryptoCard}>
-                <img
-                  src={coin.image}
-                  alt={coin.id}
-                  className={styles.cryptoImage}
-                />
-                <h1 className={styles.coinName}>{coin.id}</h1>
-                <p className={styles.coinSymbol}>{coin.symbol}</p>
-                <p className={styles.coinPrice}>
-                  Current Price: ${coin.current_price}
-                </p>
-              </div>
-            );
-          })
-        )}
+        {coinData?.map((coin) => {
+          return (
+            <div key={coin.id} className={styles.cryptoCard}>
+              <div className={styles.coinRank}>{coin.market_cap_rank}</div>
+              <img
+                src={coin.image}
+                alt={coin.id}
+                className={styles.cryptoImage}
+              />
+
+              <h1 className={styles.coinName}>{coin.id}</h1>
+              <p className={styles.coinSymbol}>{coin.symbol}</p>
+              <p className={styles.coinPrice}>
+                Current Price: ${coin.current_price}
+              </p>
+              <p className={styles.coinMax}>24hs Max: ${coin.high_24h} </p>
+              <p className={styles.coinLow}>24hs Low: ${coin.low_24h} </p>
+            </div>
+          );
+        })}
         <footer className={styles.footer}>
           Copyright © 2023 Andrés Céspedes. All rights reserved.
         </footer>

@@ -32,6 +32,12 @@
     background-color: #FFF;
    
 }
+.coinRank {
+    margin-bottom: 1vh;
+    padding: 0.7rem;
+    color: rgba(0, 0, 0, 0.397);
+    border-radius: 100%;
+}
 .cryptoImage {
     padding-bottom: 1vh;
     height: 5rem;
@@ -45,6 +51,9 @@
     text-transform: uppercase ;
 }
 .coinPrice {
+    padding-top: 2vh;
+}
+.coinMax, .coinLow {
     padding-top: 2vh;
 }
 
