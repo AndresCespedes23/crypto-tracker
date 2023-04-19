@@ -36,7 +36,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>🌐 Crypto AD 🌐</h1>
+        <header className={styles.header}>
+          <h1 className={styles.title}>🌐 Crypto AD 🌐</h1>
+        </header>
         {loading ? (
           <Spinner />
         ) : (
@@ -57,6 +59,9 @@ export default function Home() {
             );
           })
         )}
+        <footer className={styles.footer}>
+          Copyright © 2023 Andrés Céspedes. All rights reserved.
+        </footer>
       </main>
     </>
   );
