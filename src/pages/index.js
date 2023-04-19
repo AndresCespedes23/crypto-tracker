@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { Triangle } from "react-loader-spinner";
 import styles from "../styles/home.module.css";
+import Spinner from "../Components/Spinner";
 
 export default function Home() {
   const [coinData, setCoinData] = useState([]);
@@ -35,34 +35,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className={styles.title}>Crypto AD 🌐</h1>
-      {loading ? (
-        <Triangle
-          height="80"
-          width="80"
-          color="#4fa94d"
-          ariaLabel="triangle-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
-      ) : (
-        coinData?.map((coin) => {
-          return (
-            <div key={coin.id} className={styles.cryptoCard}>
-              <img
-                src={coin.image}
-                alt={coin.id}
-                className={styles.cryptoImage}
-              />
-              <div className={styles.cardContent}>
-                <h1>{coin.id}</h1>
-                <p>Current price: {coin.current_price}usd</p>
+      <main className={styles.main}>
+        <h1 className={styles.title}>Crypto AD 🌐</h1>
+        {loading ? (
+          <Spinner />
+        ) : (
+          coinData?.map((coin) => {
+            return (
+              <div key={coin.id} className={styles.cryptoCard}>
+                <img
+                  src={coin.image}
+                  alt={coin.id}
+                  className={styles.cryptoImage}
+                />
+                <h1 className={styles.coinName}>{coin.id}</h1>
+                <p className={styles.coinSymbol}>{coin.symbol}</p>
+                <p className={styles.coinPrice}>
+                  Current Price: ${coin.current_price}
+                </p>
               </div>
-            </div>
-          );
-        })
-      )}
+            );
+          })
+        )}
+      </main>
     </>
   );
 }

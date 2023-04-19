@@ -1,24 +1,43 @@
+.main {
+    background-image: url(../../public/blockchain-wallpaper.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
 .title {
-    margin: 1rem;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #FFF;
+    font-size: 2rem;
 }
 .cryptoCard {
     margin: 2rem;
     padding: 1rem;
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     border: 1px solid rgba(0, 0, 0, 0.178);
-    border-radius: 9999px;
+    border-radius: 9px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.158);
+    background-color: #FFF;
+   
 }
 .cryptoImage {
-    padding-right: 2vw;
-    height: 3rem;
-    width: 3rem;
+    padding-bottom: 1vh;
+    height: 5rem;
+    width: 5rem;
 }
-.cardContent {
-    display: flex;
-    flex-direction: column;
+.coinName{
+    text-transform: capitalize;
+}
+.coinSymbol {
+    color: rgba(0, 0, 0, 0.397);
+    text-transform: uppercase ;
+}
+.coinPrice {
+    padding-top: 2vh;
 }

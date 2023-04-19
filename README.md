@@ -1,7 +1,11 @@
 # Cryptocurrencies
 ## Description 
 
-This app displays of most important cryptocurrencies. It's build with next.js. I use the Binance API to fetch the crypto data.
+This app displays the current top 10 cryptocurrencies current prices in real time. 
+It's build with next.js. 
+I use the CoinGecko API to fetch the crypto data.
+
+I hope you found it useful.
 
 
 ## Authors
