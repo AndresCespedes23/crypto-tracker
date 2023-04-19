@@ -41,3 +41,9 @@
 .coinPrice {
     padding-top: 2vh;
 }
+
+@media only screen and (min-width: 992px) {
+    .cryptoCard {
+        margin: 2rem 35vw;
+    }
+}
