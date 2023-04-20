@@ -4,7 +4,9 @@
     justify-content: center;
     align-items: center;
     color: #FFF;
-    background-color: #000;
+    background-color: #000000b6;
+    backdrop-filter: blur(5px);
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.849);
 }
 .header {
     font-size: 2rem;
@@ -23,8 +25,6 @@
     margin: 2rem;
     padding: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     border: 1px solid rgba(0, 0, 0, 0.178);
     border-radius: 9px;
@@ -32,11 +32,22 @@
     background-color: #FFF;
    
 }
+.coinCardHeader{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.coinInfo {
+    display:flex;
+}
+.coinTitles {
+    display: flex;
+    justify-content: center ;
+    flex-direction: column;
+}
 .coinRank {
-    margin-bottom: 1vh;
-    padding: 0.7rem;
+    justify-content: end;
     color: rgba(0, 0, 0, 0.397);
-    border-radius: 100%;
 }
 .cryptoImage {
     padding-bottom: 1vh;
@@ -47,6 +58,7 @@
     text-transform: capitalize;
 }
 .coinSymbol {
+    padding-top: 1vh;
     color: rgba(0, 0, 0, 0.397);
     text-transform: uppercase ;
 }
@@ -55,6 +67,14 @@
 }
 .coinMax, .coinLow {
     padding-top: 2vh;
+   color:  rgba(0, 0, 0, 0.397);
+}
+.coinName, .coinSymbol, .coinPrice, .coinMax, .coinLow {
+    padding-left: 1vw;
+}
+.cryptoCardFooter {
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -63,6 +83,6 @@
         margin: 2rem 35vw;
     }
     .footer {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 html,
 body,
 div,
@@ -83,7 +84,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: 'Maiden Orange', sans-serif;
+  font-family: 'Sora', sans-serif;
   vertical-align: baseline;
 }
 
