@@ -1,8 +1,10 @@
-# Cryptocurrencies
+# Crypto A.D.
 ## Description 
 
-This app displays the current top 10 cryptocurrencies current prices in real time. 
+This app displays the current top 10 cryptocurrencies current prices.
+
 It's build with next.js. 
+
 I use the CoinGecko API to fetch the crypto data.
 
 I hope you found it useful.
