@@ -67,9 +67,25 @@
 .coinPrice {
     padding-top: 2vh;
 }
+.coinPercentageLoss {
+    margin-top: 2vh;
+    margin-left: 1vw;
+    padding: 4px;
+    background-color: #ff00003f;
+    border-radius: 9px;
+    color: #ff0000;
+}
+.coinPercentageProfit {
+    margin-top: 2vh;
+    margin-left: 1vw;
+    padding: 4px;
+    background-color: #00800046;
+    border-radius: 9px;
+    color: #008000;
+}
 .coinMax, .coinLow {
     padding-top: 2vh;
-   color:  rgba(0, 0, 0, 0.397);
+    color:  rgba(0, 0, 0, 0.397);
 }
 .coinName, .coinSymbol, .coinPrice, .coinMax, .coinLow {
     padding-left: 1vw;
@@ -77,6 +93,10 @@
 .cryptoCardFooter {
     display: flex;
     justify-content: space-between;
+}
+.priceContainer {
+    display: flex;
+    align-items: center;
 }
 
 

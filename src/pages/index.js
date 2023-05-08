@@ -25,7 +25,6 @@ export default function Home() {
     }
     fetchData();
   }, []);
-
   return (
     <>
       <Head>
@@ -58,9 +57,20 @@ export default function Home() {
               </div>
               <div className={styles.cryptoCardFooter}>
                 <div>
-                  <p className={styles.coinPrice}>
-                    Current Price: ${coin.current_price}
-                  </p>
+                  <div className={styles.priceContainer}>
+                    <p className={styles.coinPrice}>
+                      Current Price: ${coin.current_price}
+                    </p>
+                    <p
+                      className={
+                        coin.market_cap_change_percentage_24h >= 0
+                          ? styles.coinPercentageProfit
+                          : styles.coinPercentageLoss
+                      }
+                    >
+                      {coin.market_cap_change_percentage_24h.toFixed(2)}%
+                    </p>
+                  </div>
                   <p className={styles.coinMax}>24hs Max: ${coin.high_24h} </p>
                   <p className={styles.coinLow}>24hs Low: ${coin.low_24h} </p>
                 </div>
