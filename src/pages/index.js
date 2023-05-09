@@ -2,7 +2,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import styles from "../styles/home.module.css";
-import Spinner from "../Components/Spinner";
 
 export default function Home() {
   const [coinData, setCoinData] = useState([]);
@@ -68,7 +67,14 @@ export default function Home() {
                           : styles.coinPercentageLoss
                       }
                     >
-                      {coin.market_cap_change_percentage_24h.toFixed(2)}%
+                      {coin.market_cap_change_percentage_24h >= 0
+                        ? coin.market_cap_change_percentage_24h
+                            .toFixed(2)
+                            .replace("", "▲ ")
+                        : coin.market_cap_change_percentage_24h
+                            .toFixed(2)
+                            .replace("-", "▼ ")}
+                      %
                     </p>
                   </div>
                   <p className={styles.coinMax}>24hs Max: ${coin.high_24h} </p>
